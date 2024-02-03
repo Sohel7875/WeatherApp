@@ -103,7 +103,7 @@ const Forecast = ({ weather }) => {
         const dayName = daysOfWeek[dayOfWeek];
         return dayName
     }
-console.log(forecastData)
+// console.log(forecastData)
 
 
     return (
