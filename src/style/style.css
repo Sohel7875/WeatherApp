@@ -34,7 +34,7 @@ body {
   width: 70%;
   height: 40px;
   border: none;
-  border-radius: 5px; /* Updated */
+  border-radius: 5px; 
   padding: 2px 15px;
   font-size: 16px;
   outline: none;
@@ -48,11 +48,11 @@ body {
   font-style: italic;
 }
 .SearchEngine button {
-  width: 78px; /* Updated */
-  height: 44px; /* Updated */
+  width: 78px;
+  height: 44px; 
   border: none;
-  border-radius: 9%; /* Updated */
-  background-color: rgb(181,198,224,255); /* Updated */
+  border-radius: 9%; 
+  background-color: rgb(181,198,224,255); 
   color: #fff;
   font-size: 20px;
   outline: none;
@@ -147,7 +147,6 @@ body {
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  /* background-color: #dcebfa; */
 
   background-color: rgba(255, 255, 255, 0.302);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
@@ -181,7 +180,7 @@ body {
 @media screen and (min-width: 768px) {
   .App {
     margin-top: 50px;
-    margin-bottom: 100px; /* Increased margin for better spacing */
+    margin-bottom: 100px;
   }
 }
 
@@ -190,7 +189,7 @@ body {
   .App {
     width: 80%;
     padding: 20px;
-    margin-bottom: 80px; /* Adjusted margin for better spacing */
+    margin-bottom: 80px; 
   }
 
   .SearchEngine input {
@@ -234,7 +233,7 @@ body {
   }
 
   .day {
-    flex: 2 2 calc(50% - 6px); /* Adjusted flex basis and margin */
+    flex: 2 2 calc(50% - 6px); 
     padding: 3px;
     margin: 3px;
   }
@@ -366,7 +365,7 @@ body {
    flex-direction: column;
   }
   .col {
-    margin-bottom: 20px; /* Add some margin between columns on small screens */
+    margin-bottom: 20px; 
   }
 
   .wind {

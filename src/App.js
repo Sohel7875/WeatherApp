@@ -10,4 +10,6 @@ const App = () => {
   )
 }
 
+
+export const  API_KEY =  "e6e66ffa2edca2b6c18e1657190093b9"
 export default App

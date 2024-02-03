@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import SearchEngine from './SearchEngine';
 import Forecast from './Forecast';
+import { API_KEY } from '../App';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -72,7 +73,6 @@ const WeatherHandle = () => {
 
 useEffect(() => {
     const fetchData = async () => {
-        let API_KEY = "e6e66ffa2edca2b6c18e1657190093b9";
         const URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`
 
     
@@ -80,17 +80,16 @@ useEffect(() => {
       
         const response = await axios.get(URL);
         setWeather({ data: response.data, loading: false, error: false });
-        // console.log(response)
+       
 
        
       } catch (error) {
         setWeather({ data: {}, loading: false, error: true });
-        // console.log("error", error);
       }
     };
 
     fetchData();
-  },[]);
+  },[weather.data.name]);
 
   return (
     <div className='App'>

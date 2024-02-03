@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import ReactAnimatedWeather from "react-animated-weather";
+import { API_KEY } from '../App';
 
 
 
@@ -14,7 +15,7 @@ const Forecast = ({ weather }) => {
 
     useEffect(() => {
         const fetchForecastData = async () => {
-            let API_KEY = "e6e66ffa2edca2b6c18e1657190093b9";
+
             const URL = `https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&appid=${API_KEY}`;
 
             try {
@@ -61,6 +62,8 @@ const Forecast = ({ weather }) => {
         }
     };
 
+
+    // getting 5 day forecasting from 5day/3hourly forecasting
     const aggregateDailyData = (list) => {
         const dailyData = [];
 
@@ -92,6 +95,7 @@ const Forecast = ({ weather }) => {
     };
 
 
+    
     const formatDay = (data) => {
         const dateObject = new Date(data);
         const dayOfWeek = dateObject.getDay();
