@@ -84,8 +84,8 @@ const Forecast = ({ weather }) => {
         // Calculate max and min temperatures for each day
         dailyData.forEach((day) => {
             day.main = {
-                temp_max: Math.max(...day.temperatures.map((temp) => temp.temp_max)),
-                temp_min: Math.min(...day.temperatures.map((temp) => temp.temp_min)),
+                temp_max: Math.max(...day.temperatures.map((temp) => temp.temp_max-273.15)),
+                temp_min: Math.min(...day.temperatures.map((temp) => temp.temp_min-273.15)),
             };
             day.weather = day.weather[0]; // Assuming weather array contains only one item per day
             day.wind = day.wind[0]; // Assuming wind array contains only one item per day
@@ -103,7 +103,7 @@ const Forecast = ({ weather }) => {
         const dayName = daysOfWeek[dayOfWeek];
         return dayName
     }
-
+console.log(forecastData)
 
 
     return (
@@ -126,7 +126,7 @@ const Forecast = ({ weather }) => {
                     />
                 )}
 
-                {renderTemperature(data.main.temp)}
+                {renderTemperature(data.main.temp-273.15)}
                 <sup className="temp-deg" onClick={toggleTemperatureUnit}>
                     {isCelsius ? "°C" : "°F"} | {isCelsius ? "°F" : "°C"}
                 </sup>
