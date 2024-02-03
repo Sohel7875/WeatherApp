@@ -171,7 +171,7 @@ console.log(forecastData)
                                   <p className="day-weather-des">{day.weather[0].description}</p>
 
                                 <p className="day-temperature">
-                                    {Math.round(day.main.temp_min-273.15)}°/ <span>{Math.round(day.main.temp_max-273.15)}°</span>
+                                    {Math.floor(day.main.temp_min)}°/ <span>{Math.ceil(day.main.temp_max)}°</span>
                                 </p>
                             </div>
                         ))}
