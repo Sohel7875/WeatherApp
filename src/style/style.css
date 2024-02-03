@@ -166,6 +166,14 @@ body {
   margin-bottom: 5px;
 }
 
+.day-weather-des {
+  color: #f06789;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
 .day-temperature {
   margin-top: 5px;
   font-weight: 400;
@@ -312,6 +320,12 @@ body {
   .day-icon {
     width: 60px;
     height: 60px;
+   
+  }
+
+  .day-weather-des {
+  
+    font-size: 13px;
    
   }
 

@@ -95,7 +95,7 @@ const Forecast = ({ weather }) => {
     };
 
 
-    
+
     const formatDay = (data) => {
         const dateObject = new Date(data);
         const dayOfWeek = dateObject.getDay();
@@ -168,6 +168,8 @@ const Forecast = ({ weather }) => {
                                         alt={day.weather[0].description}
                                     />
                                 )}
+                                  <p className="day-weather-des">{day.weather[0].description}</p>
+
                                 <p className="day-temperature">
                                     {Math.round(day.main.temp_min)}°/ <span>{Math.round(day.main.temp_max)}°</span>
                                 </p>
